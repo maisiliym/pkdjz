@@ -57,6 +57,11 @@ hob:
     modz = [ "pkgs" "pkdjz" ];
   };
 
+  nixpkgs-fmt = {
+    lamdy = import ./nixpkgs-fmt;
+    modz = [ "pkdjz" ];
+  };
+
   nix-dev = {
     lamdy = import ./nix.nix;
     modz = [ "pkgs" "pkdjz" ];
