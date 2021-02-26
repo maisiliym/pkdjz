@@ -74,4 +74,9 @@ hob:
     self = null;
   };
 
+  zoxide = {
+    lamdy = import ./zoxide;
+    modz = [ "pkdjz" ];
+  };
+
 }
