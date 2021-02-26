@@ -46,6 +46,11 @@ hob:
     modz = [ "pkgs" ];
   };
 
+  neovim = {
+    lamdy = import ./neovim;
+    modz = [ "pkgs" ];
+  };
+
   nightlyRust = {
     lamdy = import ./nightlyRust.nix;
     modz = [ "mozPkgs" ];
