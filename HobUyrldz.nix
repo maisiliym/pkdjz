@@ -51,6 +51,12 @@ hob:
     modz = [ "pkgs" ];
   };
 
+  nerd-fonts = {
+    lamdy = import ./nerd-fonts;
+    modz = [ "pkgs" ];
+    self = null;
+  };
+
   nightlyRust = {
     lamdy = import ./nightlyRust.nix;
     modz = [ "mozPkgs" ];
