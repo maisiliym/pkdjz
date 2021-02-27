@@ -79,6 +79,11 @@ hob:
     self = hob.nix.maisiliym.dev;
   };
 
+  rnix-lsp = {
+    lamdy = import ./rnix-lsp;
+    modz = [ "pkdjz" ];
+  };
+
   toFormat = {
     lamdy = import ./toFormat;
     modz = [ "pkgs" "uyrld" ];
