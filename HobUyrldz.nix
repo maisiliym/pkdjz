@@ -84,6 +84,12 @@ hob:
     self = null;
   };
 
+  vimPloginz = {
+    lamdy = import ./vimPloginz;
+    modz = [ "pkgs" "pkdjz" "hob" ];
+    self = null;
+  };
+
   zoxide = {
     lamdy = import ./zoxide;
     modz = [ "pkdjz" ];
