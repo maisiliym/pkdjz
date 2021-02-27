@@ -73,6 +73,12 @@ hob:
     self = hob.nix.maisiliym.dev;
   };
 
+  toFormat = {
+    lamdy = import ./toFormat;
+    modz = [ "pkgs" "uyrld" ];
+    self = null;
+  };
+
   tree-sitter = {
     lamdy = import ./tree-sitter;
     modz = [ "pkgs" "pkdjz" ];
