@@ -1,22 +1,22 @@
 hob:
 {
   alacritty = {
-    lamdy = import ./alacritty.nix;
+    lamdy = import ./alacritty;
     modz = [ "pkgs" "pkdjz" ];
   };
 
   dino = {
-    lamdy = import ./dino.nix;
+    lamdy = import ./dino;
     modz = [ "pkgs" ];
   };
 
   dunst = {
-    lamdy = import ./dunst.nix;
+    lamdy = import ./dunst;
     modz = [ "pkgs" ];
   };
 
   fzf = {
-    lamdy = import ./fzf.nix;
+    lamdy = import ./fzf;
     modz = [ "pkgs" ];
   };
 
@@ -26,23 +26,23 @@ hob:
   };
 
   kreitOvyraidz = {
-    lamdy = import ./kreitOvyraidz.nix;
+    lamdy = import ./kreitOvyraidz;
     modz = [ "pkgs" "lib" ];
   };
 
   lowdown = {
-    lamdy = import ./lowdown.nix;
+    lamdy = import ./lowdown;
     modz = [ "pkgs" ];
   };
 
   mkCargoNix = {
-    lamdy = import ./mkCargoNix.nix;
+    lamdy = import ./mkCargoNix;
     modz = [ "pkgs" "lib" "pkdjz" ];
     self = null;
   };
 
   naersk = {
-    lamdy = import ./naersk.nix;
+    lamdy = import ./naersk;
     modz = [ "pkgs" ];
   };
 
@@ -58,13 +58,13 @@ hob:
   };
 
   nightlyRust = {
-    lamdy = import ./nightlyRust.nix;
+    lamdy = import ./nightlyRust;
     modz = [ "mozPkgs" ];
     self = null;
   };
 
   nix = {
-    lamdy = import ./nix.nix;
+    lamdy = import ./nix;
     modz = [ "pkgs" "pkdjz" ];
   };
 
@@ -74,7 +74,7 @@ hob:
   };
 
   nix-dev = {
-    lamdy = import ./nix.nix;
+    lamdy = import ./nix;
     modz = [ "pkgs" "pkdjz" ];
     self = hob.nix.maisiliym.dev;
   };
@@ -101,7 +101,7 @@ hob:
   };
 
   tree-sitter-parsers = {
-    lamdy = import ./tree-sitter/parsers.nix;
+    lamdy = import ./tree-sitter/parsers;
     modz = [ "pkgs" "pkdjz" "hob" ];
     self = null;
   };
