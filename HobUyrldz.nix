@@ -84,6 +84,11 @@ hob:
     modz = [ "pkdjz" ];
   };
 
+  rust-analyzer = {
+    lamdy = import ./rust-analyzer;
+    modz = [ "pkgs" "pkdjz" ];
+  };
+
   toFormat = {
     lamdy = import ./toFormat;
     modz = [ "pkgs" "uyrld" ];
