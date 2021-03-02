@@ -8,11 +8,11 @@ let
       completion-nvim completion-buffers dwm-vim formatter-nvim FTerm-nvim
       fzf-lsp-nvim fzf-vim galaxyline-nvim gina-vim gitsigns-nvim kommentary
       lspsaga-nvim lsp-status-nvim nvim-autopairs nvim-base16-lua
-      nvim-colorizer-lua nvim-fzf nvim-fzf-commands nvim-lazygit nvim-lspconfig
-      nvim-lspfuzzy nvim-treesitter nvim-treesitter-context
-      nvim-treesitter-refactor nvim-tree-lua nvim-web-devicons lir-nvim neogit
-      plenary-nvim popup-nvim ron-vim telescope-nvim tokei-vim vim-visual-multi
-      zoxide-vim;
+      nvim-bufferline-lua nvim-colorizer-lua nvim-fzf nvim-fzf-commands
+      nvim-lazygit nvim-lspconfig nvim-lspfuzzy nvim-treesitter
+      nvim-treesitter-context nvim-treesitter-refactor nvim-tree-lua
+      nvim-web-devicons lir-nvim neogit plenary-nvim popup-nvim ron-vim
+      telescope-nvim tokei-vim vim-visual-multi zoxide-vim;
   };
 
   eksplisitSpoks = { };
