@@ -1,7 +1,6 @@
 { self
 , stdenv
 , lib
-, fetchFromGitHub
 , cmake
 , gettext
 , msgpack
