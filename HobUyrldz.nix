@@ -5,6 +5,11 @@ hob:
     modz = [ "pkgs" "pkdjz" ];
   };
 
+  crate2nix = {
+    lamdy = import ./crate2nix;
+    modz = [ "pkdjz" ];
+  };
+
   dino = {
     lamdy = import ./dino;
     modz = [ "pkgs" ];
