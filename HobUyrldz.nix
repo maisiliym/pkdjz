@@ -40,6 +40,11 @@ hob:
     modz = [ "pkgs" ];
   };
 
+  LuaFormatter = {
+    lamdy = import ./LuaFormatter;
+    modz = [ "pkgs" ];
+  };
+
   mkCargoNix = {
     lamdy = import ./mkCargoNix;
     modz = [ "pkgs" "lib" "pkdjz" ];
