@@ -21,15 +21,9 @@ buildLuarocksPackage {
     chmod -R u+w ./
   '';
 
-  preBuild = ''
+  buildPhase = ''
     cd 3rd/luamake
-  '';
-
-  ninjaFlags = [
-    "-f ninja/linux.ninja"
-  ];
-
-  postBuild = ''
+    ninja -f ninja/linux.ninja
     cd ../..
     ./3rd/luamake/luamake rebuild
   '';
