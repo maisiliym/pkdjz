@@ -45,6 +45,11 @@ hob:
     modz = [ "pkgs" ];
   };
 
+  lua-language-server = {
+    lamdy = import ./lua-language-server;
+    modz = [ "pkgs" ];
+  };
+
   mkCargoNix = {
     lamdy = import ./mkCargoNix;
     modz = [ "pkgs" "lib" "pkdjz" ];
