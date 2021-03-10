@@ -63,7 +63,7 @@ hob:
 
   neovim = {
     lamdy = import ./neovim;
-    modz = [ "pkgs" ];
+    modz = [ "pkdjz" "pkgs" ];
   };
 
   nerd-fonts = {
