@@ -7,7 +7,7 @@ let
   inherit (builtins) mapAttrs;
 
   parserz = {
-    nix = hob.tree-sitter-nix;
+    nix = hob.tree-sitter-nix.mein;
   };
 
   bildParser = neim: self:

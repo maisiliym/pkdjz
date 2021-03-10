@@ -116,7 +116,7 @@ hob:
   };
 
   tree-sitter-parsers = {
-    lamdy = import ./tree-sitter/parsers;
+    lamdy = import ./tree-sitter/parsers.nix;
     modz = [ "pkgs" "pkdjz" "hob" ];
     self = null;
   };
