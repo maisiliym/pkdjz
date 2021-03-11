@@ -1,7 +1,6 @@
-{ hob, vimUtils, fzf }:
+{ hob, bildNvimPlogin, fzf }:
 let
   inherit (builtins) mapAttrs;
-  inherit (vimUtils) buildVimPluginFrom2Nix;
 
   implaidSpoks = (import ./spoksFromHob.nix) hob;
 
@@ -12,7 +11,7 @@ let
   spoks = eksplisitSpoks
     // (mapAttrs (n: s: s.mein) implaidSpoks);
 
-  fzf-vim-core = buildVimPluginFrom2Nix {
+  fzf-vim-core = bildNvimPlogin {
     pname = "fzf";
     version = fzf.version;
     src = fzf.src;
@@ -27,7 +26,7 @@ let
   bildVimPlogin = { neim, self, ovyraidz }:
     let
     in
-    buildVimPluginFrom2Nix ({
+    bildNvimPlogin ({
       pname = neim;
       version = self.shortRev;
       src = self;
