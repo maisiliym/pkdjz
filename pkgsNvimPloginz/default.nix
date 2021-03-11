@@ -1,19 +1,26 @@
-uyrld@{ kor, lib, pkgs, hob, bildNvimPlogin }:
+{ self, kor, lib, pkgs, bildNvimPlogin }:
 let
   inherit (kor) mkLamdy;
 
-  ovyridynPkgs = pkgs //
-    { buildVimPluginFrom2Nix = bildNvimPlogin; };
+  nullDarwinPkgs = {
+    Cocoa = null;
+    CoreFoundation = null;
+    CoreServices = null;
+  };
 
-  basePath = (hob.nixpkgs.mein + /pkgs/misc/vim-plugins);
-  overridesLamdy = import (basePath + /overrides.nix);
+  ovyridynPkgs = pkgs
+    // { buildVimPluginFrom2Nix = bildNvimPlogin; }
+    // nullDarwinPkgs;
+
+  basePath = (self + /pkgs/misc/vim-plugins);
+  overridesLamdy = import (self + /pkgs/misc/vim-plugins/overrides.nix);
 
   overrides = mkLamdy {
     lamdy = overridesLamdy;
     klozyr = ovyridynPkgs;
   };
 
-  lamdy = import (basePath + /generated.nix);
+  lamdy = import (self + /pkgs/misc/vim-plugins/generated.nix);
 
   klozyr = ovyridynPkgs //
     { inherit overrides; };

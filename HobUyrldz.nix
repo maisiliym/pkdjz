@@ -8,6 +8,7 @@ hob:
   bildNvimPlogin = {
     lamdy = import ./bildNvimPlogin;
     modz = [ "pkgs" "pkdjz" ];
+    self = null;
   };
 
   crate2nix = {
@@ -38,6 +39,7 @@ hob:
   kreitOvyraidz = {
     lamdy = import ./kreitOvyraidz;
     modz = [ "pkgs" "lib" ];
+    self = null;
   };
 
   lowdown = {
@@ -74,6 +76,7 @@ hob:
   nvimPloginz = {
     lamdy = import ./nvimPloginz;
     modz = [ "hob" "pkdjz" ];
+    self = null;
   };
 
   nerd-fonts = {
@@ -102,6 +105,12 @@ hob:
     lamdy = import ./nix;
     modz = [ "pkgs" "pkdjz" ];
     self = hob.nix.maisiliym.dev;
+  };
+
+  pkgsNvimPloginz = {
+    lamdy = import ./pkgsNvimPloginz;
+    modz = [ "pkgsSet" "lib" "pkdjz" ];
+    self = hob.nixpkgs.mein;
   };
 
   rnix-lsp = {
