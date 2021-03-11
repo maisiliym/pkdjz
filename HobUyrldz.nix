@@ -71,6 +71,11 @@ hob:
     modz = [ "pkdjz" "pkgs" ];
   };
 
+  nvimPloginz = {
+    lamdy = import ./nvimPloginz;
+    modz = [ "hob" "pkdjz" ];
+  };
+
   nerd-fonts = {
     lamdy = import ./nerd-fonts;
     modz = [ "pkgs" ];

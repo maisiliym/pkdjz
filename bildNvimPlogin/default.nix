@@ -33,7 +33,7 @@ stdenv.mkDerivation (attrs // {
   ''
     if [ -d "$out/doc" ]; then
     echo "Building help tags"
-    if ! ${neovim}/bin/vim -N -u NONE -i NONE -n -E -s -V1 -c "helptags $out/doc" +quit!; then
+    if ! ${neovim}/bin/nvim -N -u NONE -i NONE -n -E -s -V1 -c "helptags $out/doc" +quit!; then
     echo "Failed to build help tags!"
     exit 1
     fi
