@@ -27,7 +27,7 @@ stdenv.mkDerivation (attrs // {
     runHook preInstall
 
     mkdir -p $out
-    cp -r . $out
+    cp -r {filetype.vim,scripts.vim,autoload,colors,doc,ftplugin,indent,keymap,plugin,rplugin,syntax} $out
   ''
   + # build help tags
   ''
