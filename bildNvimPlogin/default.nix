@@ -17,17 +17,46 @@ attrs@
 , postInstall ? ""
 , ...
 }:
+let
+  inherit (builtins) elem readDir;
+  inherit (kor) mapAttrsToList;
 
+  srcDirs = readDir src;
+
+  ploginComponents = [
+    "lua"
+    "filetype.vim"
+    "scripts.vim"
+    "autoload"
+    "colors"
+    "doc"
+    "ftplugin"
+    "indent"
+    "keymap"
+    "plugin"
+    "rplugin"
+    "syntax"
+  ];
+
+  getComponent = dirNeim: fileType:
+    if ((fileType == "directory") && (elem dirNeim ploginComponents))
+    then dirNeim else null;
+
+  components = mapAttrsToList getComponent srcDirs;
+
+in
 stdenv.mkDerivation (attrs // {
   name = namePrefix + "${pname}-${version}";
 
-  inherit unpackPhase configurePhase buildPhase preInstall postInstall;
+  inherit unpackPhase configurePhase buildPhase preInstall postInstall components;
 
   installPhase = ''
     runHook preInstall
 
     mkdir -p $out
-    cp -r {filetype.vim,scripts.vim,autoload,colors,doc,ftplugin,indent,keymap,plugin,rplugin,syntax} $out
+    for dir in ''${components[@]}; do
+      cp -r $dir $out
+    done
   ''
   + # build help tags
   ''
